@@ -39,5 +39,5 @@ The DL backend defaults to a NumPy neural network so the app runs cleanly on Win
 Tests:
 
 ```powershell
-pytest
+python -m pytest
 ```
