@@ -53,7 +53,7 @@ def add_transaction(transaction: Transaction) -> dict[str, Any]:
 @app.get("/analysis")
 def get_analysis() -> dict[str, Any]:
     result = analyze(sample_transactions())
-    result.pop("category_spend")
+    result["category_spend"] = result["category_spend"].to_dict()
     return result
 
 @app.get("/advisor")
